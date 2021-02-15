@@ -33,7 +33,7 @@ public class ProductService {
         return repository.save(entity);
     }
 
-    public void deleteAll(Product product) {
+    public void deleteAll() {
         repository.deleteAll();
     }
 
