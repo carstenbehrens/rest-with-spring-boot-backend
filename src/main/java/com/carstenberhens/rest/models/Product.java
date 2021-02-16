@@ -18,6 +18,15 @@ public class Product {
     @Column(name = "description")
     private String description;
 
+    public Product() {
+    }
+
+    public Product(String title, String name, String description) {
+        this.title = title;
+        this.name = name;
+        this.description = description;
+    }
+
     public String getDescription() {
         return description;
     }
