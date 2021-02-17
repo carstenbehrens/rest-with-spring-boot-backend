@@ -1,20 +1,26 @@
 package com.carstenberhens.rest.models;
 
+import org.springframework.validation.annotation.Validated;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
+@Validated
 @Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotBlank(message = "Title is mandatory")
     @Column(name = "title")
     private String title;
 
+    @NotBlank(message = "Name is mandatory")
     @Column(name = "name")
     private String name;
 
+    @NotBlank(message = "Description is mandatory")
     @Column(name = "description")
     private String description;
 
